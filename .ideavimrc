@@ -1,0 +1,20 @@
+let mapleader = " "
+
+" edit ideavim config
+nnoremap <leader>ve :e ~/.ideavimrc<CR>
+nnoremap <leader>vr :source ~/.ideavimrc<CR>
+
+set relativenumber
+set number
+
+" move lines up and down and format
+vmap J :m '>+1<CR>gv=gv
+vmap K :m '<-2<CR>gv=gv
+
+nmap <leader>cf <action>(ReformatCode)
+nmap <leader>ca <action>(ShowIntentionActions)
+nmap <leader>ci <action>(OptimizeImports)
+nmap gd <action>(GotoDeclaration)
+nmap gD <action>(GotoTypeDeclaration)
+nmap gi <action>(GotoImplementation)
+nmap <leader>rn <action>(RenameElement)
