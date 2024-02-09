@@ -122,9 +122,9 @@ export PATH="/Applications/IntelliJ IDEA.app/Contents/MacOS:$PATH"
 
 # ALIASES
 # shell
-alias zshconfig="nvim ~/.config/.zshrc"
 alias v="nvim"
-alias sourcezsh="source ~/.config/.zshrc"
+alias zshconfig="nvim ~/.zshrc"
+alias sourcezsh="source ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 
 # nvim
@@ -161,7 +161,6 @@ alias gcplogin="gcloud auth application-default login"
 
 # etc
 alias workspace="cd ~/workspace"
-alias home="cd ~/"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -179,5 +178,5 @@ eval "$(direnv hook zsh)"
 
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-[[ -s "/Users/gsteyn/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/gsteyn/.sdkman/bin/sdkman-init.sh"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
