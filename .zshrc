@@ -1,18 +1,26 @@
 export ZSH="$HOME/.oh-my-zsh"
 
-source $ZSH/oh-my-zsh.sh
 eval "$(starship init zsh)"
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
-# plugins can be found in $ZSH/plugins/
-# custom plugins can be found in $ZSH_CUSTOM/plugins
-plugins=( 
-    git
-    zsh-autosuggestions
-    fast-syntax-highlighting
-    zsh-history-substring-search
-    zsh-vi-mode
-)
+eval "$(sheldon source)"
+
+# source $ZSH/oh-my-zsh.sh
+# # plugins can be found in $ZSH/plugins/
+# # custom plugins can be found in $ZSH_CUSTOM/plugins
+# plugins=( 
+#     git
+#     zsh-autosuggestions
+#     fast-syntax-highlighting
+#     zsh-history-substring-search
+#     zsh-vi-mode
+# )
+
+# key bindings for plugins
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
 
 # google cloud platform
 source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
