@@ -1,3 +1,5 @@
+setopt auto_cd
+
 export ZSH="$HOME/.oh-my-zsh"
 
 eval "$(starship init zsh)"
