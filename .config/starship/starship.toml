@@ -62,9 +62,9 @@ format = "[[   $duration ](fg:text2 bg:surface2)]($style)"
 success_symbol = "[❯](green)"
 error_symbol = "[❯](red)"
 vimcmd_symbol = "[❮](green)"
-vimcmd_replace_one_symbol = '[❮](bold mauve)'
-vimcmd_replace_symbol = '[❮](bold mauve)'
-vimcmd_visual_symbol = '[❮](bold yellow)'
+vimcmd_replace_one_symbol = '[❮](mauve)'
+vimcmd_replace_symbol = '[❮](mauve)'
+vimcmd_visual_symbol = '[❮](yellow)'
 
 [palettes.catppuccin_mocha]
 rosewater = "#f4dbd6"

@@ -1,10 +1,11 @@
 export ZSH="$HOME/.oh-my-zsh"
 
-# source $ZSH/oh-my-zsh.sh
+source $ZSH/oh-my-zsh.sh
 eval "$(starship init zsh)"
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
 # plugins can be found in $ZSH/plugins/
+# custom plugins can be found in $ZSH_CUSTOM/plugins
 plugins=( 
     git
     zsh-autosuggestions
