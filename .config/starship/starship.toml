@@ -1,0 +1,96 @@
+add_newline = true
+
+format = """
+[](mauve)\
+$directory\
+[](bg:pink fg:mauve)\
+$git_branch\
+$git_status\
+[](bg:flamingo fg:pink)\
+$rust\
+$golang\
+$java\
+$kotlin\
+$python\
+[](bg:surface2 fg:flamingo)\
+$cmd_duration\
+[ ](fg:surface2)\
+$line_break$character"""
+
+palette = "catppuccin_mocha"
+
+[directory]
+style = "fg:text2 bg:mauve"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[git_branch]
+style = "bg:pink"
+format = '[[ $symbol $branch ](fg:text2 bg:pink)]($style)'
+
+[git_status]
+style = "bg:pink"
+format = '[[($all_status$ahead_behind )](fg:text2 bg:pink)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:flamingo"
+format = '[[ $symbol( $version) ](fg:text2 bg:flamingo)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:flamingo"
+format = '[[ $symbol( $version) ](fg:text2 bg:flamingo)]($style)'
+
+[java]
+symbol = " "
+style = "bg:flamingo"
+format = '[[ $symbol( $version) ](fg:text2 bg:flamingo)]($style)'
+
+[kotlin]
+symbol = ""
+style = "bg:flamingo"
+format = '[[ $symbol( $version) ](fg:text2 bg:flamingo)]($style)'
+
+[cmd_duration]
+disabled = false
+style = "bg:surface2"
+format = "[[   $duration ](fg:text2 bg:surface2)]($style)"
+
+[character]
+success_symbol = "[❯](green)"
+error_symbol = "[❯](red)"
+vimcmd_symbol = "[❮](green)"
+vimcmd_replace_one_symbol = '[❮](bold mauve)'
+vimcmd_replace_symbol = '[❮](bold mauve)'
+vimcmd_visual_symbol = '[❮](bold yellow)'
+
+[palettes.catppuccin_mocha]
+rosewater = "#f4dbd6"
+flamingo = "#f0c6c6"
+pink = "#f5bde6"
+mauve = "#c6a0f6"
+red = "#ed8796"
+maroon = "#ee99a0"
+peach = "#f5a97f"
+yellow = "#eed49f"
+green = "#a6da95"
+teal = "#8bd5ca"
+sky = "#91d7e3"
+sapphire = "#7dc4e4"
+blue = "#8aadf4"
+lavender = "#b7bdf8"
+text = "#cad3f5"
+text2 = "#ffffff"
+subtext1 = "#b8c0e0"
+subtext0 = "#a5adcb"
+overlay2 = "#939ab7"
+overlay1 = "#8087a2"
+overlay0 = "#6e738d"
+surface2 = "#5b6078"
+surface1 = "#494d64"
+surface0 = "#24273a"
+base = "#24273a"
+mantle = "#1e2030"
+crust = "#181926"
