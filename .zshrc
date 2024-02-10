@@ -19,8 +19,6 @@ eval "$(sheldon source)"
 # key bindings for plugins
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
-bindkey -M vicmd 'k' history-substring-search-up
-bindkey -M vicmd 'j' history-substring-search-down
 
 # google cloud platform
 source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
