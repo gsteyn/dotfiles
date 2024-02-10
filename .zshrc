@@ -33,6 +33,8 @@ export PATH="/Applications/IntelliJ IDEA.app/Contents/MacOS:$PATH"
 
 # ALIASES
 # shell
+alias cat=bat
+
 alias v="nvim"
 alias zshconfig="nvim ~/.zshrc"
 alias sourcezsh="source ~/.zshrc"
@@ -88,3 +90,4 @@ eval "$(direnv hook zsh)"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
+eval "$(zoxide init zsh)"
