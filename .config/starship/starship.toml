@@ -1,62 +1,73 @@
 add_newline = true
 
 format = """
-[](mauve)\
+[](color_dir)\
 $directory\
-[](bg:pink fg:mauve)\
+[](bg:color_git fg:color_dir)\
 $git_branch\
 $git_status\
-[](bg:flamingo fg:pink)\
+[](bg:color_lang fg:color_git)\
 $rust\
 $golang\
 $java\
 $kotlin\
 $python\
-[](bg:surface2 fg:flamingo)\
+[](bg:surface2 fg:color_lang)\
 $cmd_duration\
 [ ](fg:surface2)\
+$fill\
+[](color_cloud)\
+$gcloud\
+[ ](color_cloud)\
 $line_break$character"""
 
 palette = "catppuccin_mocha"
 
 [directory]
-style = "fg:text2 bg:mauve"
+style = "fg:text2 bg:color_dir"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
 
 [git_branch]
-style = "bg:pink"
-format = '[[ $symbol $branch ](fg:text2 bg:pink)]($style)'
+style = "bg:color_git"
+format = '[[ $symbol $branch ](fg:text2 bg:color_git)]($style)'
 
 [git_status]
-style = "bg:pink"
-format = '[[($all_status$ahead_behind )](fg:text2 bg:pink)]($style)'
+style = "bg:color_git"
+format = '[[($all_status$ahead_behind )](fg:text2 bg:color_git)]($style)'
 
 [rust]
 symbol = ""
-style = "bg:flamingo"
-format = '[[ $symbol( $version) ](fg:text2 bg:flamingo)]($style)'
+style = "bg:color_lang"
+format = '[[ $symbol( $version) ](fg:text2 bg:color_lang)]($style)'
 
 [golang]
 symbol = ""
-style = "bg:flamingo"
-format = '[[ $symbol( $version) ](fg:text2 bg:flamingo)]($style)'
+style = "bg:color_lang"
+format = '[[ $symbol( $version) ](fg:text2 bg:color_lang)]($style)'
 
 [java]
 symbol = " "
-style = "bg:flamingo"
-format = '[[ $symbol( $version) ](fg:text2 bg:flamingo)]($style)'
+style = "bg:color_lang"
+format = '[[ $symbol( $version) ](fg:text2 bg:color_lang)]($style)'
 
 [kotlin]
 symbol = ""
-style = "bg:flamingo"
-format = '[[ $symbol( $version) ](fg:text2 bg:flamingo)]($style)'
+style = "bg:color_lang"
+format = '[[ $symbol( $version) ](fg:text2 bg:color_lang)]($style)'
 
 [cmd_duration]
 disabled = false
 style = "bg:surface2"
 format = "[[   $duration ](fg:text2 bg:surface2)]($style)"
+
+[gcloud]
+style = "bg:color_cloud"
+format = "[[ $symbol$account(@$domain)($region) ](fg:text2 bg:color_cloud)]($style)"
+
+[fill]
+symbol = " "
 
 [character]
 success_symbol = "[❯](green)"
@@ -67,6 +78,10 @@ vimcmd_replace_symbol = '[❮](mauve)'
 vimcmd_visual_symbol = '[❮](yellow)'
 
 [palettes.catppuccin_mocha]
+color_dir = "#c6a0f6"  # mauve
+color_git = "#b7bdf8"   # lavender
+color_lang = "#f5bde6"  # pink
+color_cloud = "#f5a97f"  # peach
 rosewater = "#f4dbd6"
 flamingo = "#f0c6c6"
 pink = "#f5bde6"
