@@ -1,12 +1,11 @@
 setopt auto_cd
 
-export ZSH="$HOME/.oh-my-zsh"
-
 eval "$(starship init zsh)"
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
 eval "$(sheldon source)"
 
+# export ZSH="$HOME/.oh-my-zsh"
 # source $ZSH/oh-my-zsh.sh
 # # plugins can be found in $ZSH/plugins/
 # # custom plugins can be found in $ZSH_CUSTOM/plugins
