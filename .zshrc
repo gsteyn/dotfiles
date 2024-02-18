@@ -18,8 +18,10 @@ eval "$(sheldon source)"
 # )
 
 # key bindings for plugins
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
+# bindkey "^[[A" history-substring-search-up
+# bindkey "^[[B" history-substring-search-down
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
 
 # google cloud platform
 source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
