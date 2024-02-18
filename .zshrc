@@ -32,7 +32,7 @@ export PATH="/Applications/IntelliJ IDEA.app/Contents/MacOS:$PATH"
 
 # ALIASES
 # shell
-alias cat=bat
+alias cd=z
 
 alias v="nvim"
 alias zshconfig="nvim ~/.zshrc"
