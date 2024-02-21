@@ -1,70 +1,77 @@
 add_newline = true
 
 format = """
-[](color_dir)\
+$username\
+$hostname\
 $directory\
-[](bg:color_git fg:color_dir)\
 $git_branch\
 $git_status\
-[](bg:color_lang fg:color_git)\
 $rust\
 $golang\
 $java\
 $kotlin\
 $python\
-[](bg:surface2 fg:color_lang)\
 $cmd_duration\
-[ ](fg:surface2)\
 $fill\
-[](color_cloud)\
 $gcloud\
-[ ](color_cloud)\
 $line_break$character"""
 
 palette = "catppuccin_mocha"
 
+[username]
+style_user = "fg:lavender"
+style_root = "fg:maroon"
+format = "[$user]($style)"
+show_always = false
+disabled = false
+
+[hostname]
+ssh_only = true
+format = "[@$hostname  ](lavender)"
+disabled = false
+
 [directory]
-style = "fg:text2 bg:color_dir"
-format = "[ $path ]($style)"
+style = "fg:mauve"
+format = "[$path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
 
 [git_branch]
-style = "bg:color_git"
-format = '[[ $symbol $branch ](fg:text2 bg:color_git)]($style)'
+style = "fg:pink"
+format = "[ $symbol$branch ]($style)"
 
 [git_status]
-style = "bg:color_git"
-format = '[[($all_status$ahead_behind )](fg:text2 bg:color_git)]($style)'
+style = "fg:pink"
+format = '[$all_status$ahead_behind ]($style)'
 
 [rust]
 symbol = ""
-style = "bg:color_lang"
-format = '[[ $symbol( $version) ](fg:text2 bg:color_lang)]($style)'
+style = "fg:sapphire"
+format = '[ $symbol$version]($style)'
 
 [golang]
 symbol = ""
-style = "bg:color_lang"
-format = '[[ $symbol( $version) ](fg:text2 bg:color_lang)]($style)'
+style = "fg:sapphire"
+format = '[ $symbol$version]($style)'
 
 [java]
 symbol = " "
-style = "bg:color_lang"
-format = '[[ $symbol( $version) ](fg:text2 bg:color_lang)]($style)'
+style = "fg:sapphire"
+format = '[ $symbol$version]($style)'
 
 [kotlin]
 symbol = ""
-style = "bg:color_lang"
-format = '[[ $symbol( $version) ](fg:text2 bg:color_lang)]($style)'
+style = "fg:sapphire"
+format = '[ $symbol$version]($style)'
 
 [cmd_duration]
-disabled = false
-style = "bg:surface2"
-format = "[[   $duration ](fg:text bg:surface2)]($style)"
+disabled = true
+style = "fg:text"
+format = "[  $duration]($style)"
 
 [gcloud]
-style = "bg:color_cloud"
-format = "[[ $symbol$account(@$domain)($region) ](fg:text2 bg:color_cloud)]($style)"
+style = "fg:flamingo"
+format = "[$symbol$account(@$domain)($region) ]($style)"
 
 [fill]
 symbol = " "
@@ -78,10 +85,6 @@ vimcmd_replace_symbol = '[❮](mauve)'
 vimcmd_visual_symbol = '[❮](yellow)'
 
 [palettes.catppuccin_mocha]
-color_dir = "#c6a0f6"  # mauve
-color_git = "#b7bdf8"   # lavender
-color_lang = "#f5bde6"  # pink
-color_cloud = "#f5a97f"  # peach
 rosewater = "#f4dbd6"
 flamingo = "#f0c6c6"
 pink = "#f5bde6"
@@ -97,7 +100,6 @@ sapphire = "#7dc4e4"
 blue = "#8aadf4"
 lavender = "#b7bdf8"
 text = "#cad3f5"
-text2 = "#494d64"  # surface1
 subtext1 = "#b8c0e0"
 subtext0 = "#a5adcb"
 overlay2 = "#939ab7"
