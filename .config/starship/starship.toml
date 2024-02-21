@@ -47,22 +47,22 @@ format = '[$all_status$ahead_behind ]($style)'
 [rust]
 symbol = ""
 style = "fg:sapphire"
-format = '[ $symbol$version]($style)'
+format = '[ $symbol $version]($style)'
 
 [golang]
 symbol = ""
 style = "fg:sapphire"
-format = '[ $symbol$version]($style)'
+format = '[ $symbol $version]($style)'
 
 [java]
 symbol = " "
 style = "fg:sapphire"
-format = '[ $symbol$version]($style)'
+format = '[ $symbol $version]($style)'
 
 [kotlin]
 symbol = ""
 style = "fg:sapphire"
-format = '[ $symbol$version]($style)'
+format = '[ $symbol $version]($style)'
 
 [cmd_duration]
 disabled = true
