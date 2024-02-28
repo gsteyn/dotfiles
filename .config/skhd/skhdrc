@@ -33,6 +33,8 @@ ctrl + alt - l : yabai -m window --warp east
 # move window to prev and next space
 shift + alt - p : yabai -m window --space prev
 shift + alt - n : yabai -m window --space next
+# rotate windows in space
+shift + ctrl + alt - l : yabai -m space --rotate 90
 # move window to specific space
 shift + alt - 1 : yabai -m window --space 1
 shift + alt - 2 : yabai -m window --space 2
