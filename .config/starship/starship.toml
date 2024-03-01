@@ -13,6 +13,7 @@ $kotlin\
 $python\
 $cmd_duration\
 $fill\
+$conda\
 $gcloud\
 $line_break$character"""
 
@@ -68,6 +69,11 @@ format = '[ $symbol $version]($style)'
 disabled = true
 style = "fg:text"
 format = "[  $duration]($style)"
+
+[conda]
+style = "fg:green"
+format = "[$symbol $environment ]($style) "
+ignore_base = false
 
 [gcloud]
 style = "fg:flamingo"
