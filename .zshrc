@@ -51,6 +51,8 @@ alias lst="ls -T"
 
 # lazygit
 alias lg="lazygit"
+# lazydocker
+alias lg="lazydocker"
 
 # maven
 alias mcv="./mvnw clean verify"
