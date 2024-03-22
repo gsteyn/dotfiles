@@ -6,6 +6,8 @@ jq
 koekeishiya/formulae/skhd
 koekeishiya/formulae/yabai
 kubectx
+lazydocker
+libpq
 maven
 neovim
 node
