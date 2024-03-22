@@ -31,6 +31,7 @@ export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 # PATH
 export PATH="$HOME/workspace/tools/find-my-namespace:$PATH"
 export PATH="/Applications/IntelliJ IDEA.app/Contents/MacOS:$PATH"
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
 # ALIASES
 # shell
