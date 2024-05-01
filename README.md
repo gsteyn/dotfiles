@@ -30,13 +30,13 @@ cd dotfiles
 Then, use `GNU stow` to create symlinks of the files in the `dotfiles` folder.
 
 ```bash
-$ stow .
+stow .
 ```
 
 Finally, install all the `brew` packages.
 
 ```bash
-$ xargs brew install < brew_leaves.txt
+xargs brew install < brew_leaves.txt
 ```
 
 ## Leaving machine
@@ -45,5 +45,5 @@ When leaving the machine, or when new homebrew installations have been added tha
 for future setups, then generate the leaves again.
 
 ```bash
-$ brew leaves > brew_leaves.txt
+brew leaves > brew_leaves.txt
 ```
