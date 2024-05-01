@@ -24,12 +24,12 @@ bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
 
 # google cloud platform
-source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
-source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
-export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+# source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+# source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
+# export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 # PATH
-export PATH="$HOME/workspace/tools/find-my-namespace:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/Applications/IntelliJ IDEA.app/Contents/MacOS:$PATH"
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
@@ -45,8 +45,8 @@ alias ohmyzsh="nvim ~/.oh-my-zsh"
 # nvim
 alias nvimconfig="nvim ~/.config/nvim"
 
-# exa
-alias ls="exa -la"
+# lsd
+alias ls="lsd -la"
 alias lst="ls -T"
 
 # lazygit
@@ -76,19 +76,11 @@ export PATH="/usr/local/go/bin:$PATH"
 # google cloud
 alias gcplogin="gcloud auth application-default login"
 
+# psql
+alias dbconfig="psql -U admin config -h localhost -p 54000"
+
 # etc
 alias workspace="cd ~/workspace"
-
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/gsteyn/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
-
-### nvm and direnv
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-
-eval "$(direnv hook zsh)"
-### end: nvm and direnv
 
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
