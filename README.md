@@ -23,8 +23,8 @@ brew install stow
 Firstly, checkout the `dotfiles` repository to your `$HOME` directory using `git`.
 
 ```bash
-$ git clone git@github.com/gsteyn/dotfiles
-$ cd dotfiles
+git clone git@github.com:gsteyn/dotfiles.git
+cd dotfiles
 ```
 
 Then, use `GNU stow` to create symlinks of the files in the `dotfiles` folder.
