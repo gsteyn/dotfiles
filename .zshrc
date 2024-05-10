@@ -28,47 +28,14 @@ bindkey "$terminfo[kcud1]" history-substring-search-down
 # source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 # export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
+for f in ~/.config/zsh_config/*; do source $f; done
+
+export NPM_TOKEN="glpat-GEsgZjcpUvANB1UJwzhc"
+
 # PATH
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/Applications/IntelliJ IDEA.app/Contents/MacOS:$PATH"
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
-
-# ALIASES
-# shell
-alias cd=z
-
-alias v="nvim"
-alias zshconfig="nvim ~/.zshrc"
-alias sourcezsh="source ~/.zshrc"
-alias ohmyzsh="nvim ~/.oh-my-zsh"
-
-# nvim
-alias nvimconfig="nvim ~/.config/nvim"
-
-# lsd
-alias ls="lsd -la"
-alias lst="ls -T"
-
-# lazygit
-alias lg="lazygit"
-# lazydocker
-alias ldkr="lazydocker"
-
-# maven
-alias mcv="./mvnw clean verify"
-alias mci="./mvnw clean install"
-alias mcist="./mvnw clean install -DskipTests"
-
-# gradle
-alias grb="./gradlew build"
-alias grt="./gradlew test"
-
-# git
-alias gl5="git log -5"
-alias gpl="git pull"
-alias gps="git push"
-alias ga="git add -p"
-alias gcm="git commit"
 
 # go 
 export PATH="/usr/local/go/bin:$PATH"
@@ -78,6 +45,11 @@ alias gcplogin="gcloud auth application-default login"
 
 # psql
 alias dbconfig="psql -U admin config -h localhost -p 54000"
+
+# solvimon
+alias startall="./deploy/local/startAll.sh"
+alias stopall="./deploy/local/stopAll.sh"
+alias loginconfig="./deploy/local/postgres/loginConfigCluster1.sh"
 
 # etc
 alias workspace="cd ~/workspace"
@@ -102,4 +74,9 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
