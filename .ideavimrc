@@ -6,6 +6,7 @@ nnoremap <leader>vr :source ~/.ideavimrc<CR>
 
 set relativenumber
 set number
+set scrolloff=10
 
 " move lines up and down and format
 vmap J :m '>+1<CR>gv=gv
