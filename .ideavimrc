@@ -19,6 +19,7 @@ nmap <leader>cu <action>(FindUsages)
 nmap gd <action>(GotoDeclaration)
 nmap gD <action>(GotoTypeDeclaration)
 nmap gi <action>(GotoImplementation)
+nmap gu <action>(GotoSuperMethod)
 nmap <leader>rn <action>(RenameElement)
 
 " Copy to clipboard
