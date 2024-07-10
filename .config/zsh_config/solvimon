@@ -2,4 +2,6 @@
 alias startall="./deploy/local/startAll.sh"
 alias stopall="./deploy/local/stopAll.sh"
 alias loginconfig="./deploy/local/postgres/loginConfigCluster1.sh"
+alias buildconfigs="./deploy/local/buildConfigs.sh"
+alias buildpostgres="./deploy/local/postgres/build.sh -c true"
 
