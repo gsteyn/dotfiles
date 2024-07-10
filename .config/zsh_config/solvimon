@@ -1,0 +1,5 @@
+# solvimon
+alias startall="./deploy/local/startAll.sh"
+alias stopall="./deploy/local/stopAll.sh"
+alias loginconfig="./deploy/local/postgres/loginConfigCluster1.sh"
+
