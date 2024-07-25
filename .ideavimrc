@@ -12,6 +12,7 @@ set scrolloff=10
 vmap J :m '>+1<CR>gv=gv
 vmap K :m '<-2<CR>gv=gv
 
+" code navigation
 nmap <leader>cf <action>(ReformatCode)
 nmap <leader>ca <action>(ShowIntentionActions)
 nmap <leader>ci <action>(OptimizeImports)
@@ -20,15 +21,20 @@ nmap gd <action>(GotoDeclaration)
 nmap gD <action>(GotoTypeDeclaration)
 nmap gi <action>(GotoImplementation)
 nmap gu <action>(GotoSuperMethod)
+
+" refactoring
 nmap <leader>rn <action>(RenameElement)
 
-" Copy to clipboard
+" terminal
+nmap <leader>to <action>(ActivateTerminalToolWindow)
+
+" copy to clipboard
 vnoremap  <leader>y  "+y
 nnoremap  <leader>Y  "+yg_
 nnoremap  <leader>y  "+y
 nnoremap  <leader>yy  "+yy
 
-" Paste from clipboard
+" paste from clipboard
 nnoremap <leader>p "+p
 nnoremap <leader>P "+P
 vnoremap <leader>p "+p
