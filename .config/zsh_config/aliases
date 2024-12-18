@@ -34,4 +34,8 @@ alias gpl="git pull"
 alias gps="git push"
 alias ga="git add -p"
 alias gcm="git commit"
-
+alias gfiddle='git fiddle --no-fiddle --fiddle-subject'
+alias gfixup='git fixup'
+alias glog=$'git log --pretty=format:\'%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s\' --date=short'
+alias gls=$'git ls-files | awk -F / \'{print $1}\' | uniq | xargs ls -d --color=auto'
+alias glsi=$'git ls-files --others | awk -F / \'{print $1}\' | uniq | xargs ls -d --color=auto'
