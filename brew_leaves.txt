@@ -1,5 +1,6 @@
 bat
 fzf
+git
 jesseduffield/lazygit/lazygit
 jq
 koekeishiya/formulae/skhd
@@ -7,6 +8,7 @@ koekeishiya/formulae/yabai
 kubectx
 lazydocker
 libpq
+lsd
 maven
 neovim
 node
