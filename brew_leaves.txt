@@ -1,4 +1,6 @@
 bat
+coreutils
+curl
 fzf
 git
 jesseduffield/lazygit/lazygit
@@ -9,6 +11,7 @@ kubectx
 lazydocker
 libpq
 lsd
+make
 maven
 neovim
 node
