@@ -37,26 +37,21 @@ export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/Applications/IntelliJ IDEA.app/Contents/MacOS:$PATH"
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
+# asdf
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+
 # go 
 export PATH="/usr/local/go/bin:$PATH"
 
 # google cloud
 alias gcplogin="gcloud auth application-default login"
 
-# psql
-alias dbconfig="psql -U admin config -h localhost -p 54000"
-
-# solvimon
-alias startall="./deploy/local/startAll.sh"
-alias stopall="./deploy/local/stopAll.sh"
-alias loginconfig="./deploy/local/postgres/loginConfigCluster1.sh"
-
 # etc
 alias workspace="cd ~/workspace"
 
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+#[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 eval "$(zoxide init zsh)"
 
