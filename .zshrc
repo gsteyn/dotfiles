@@ -30,8 +30,6 @@ bindkey "$terminfo[kcud1]" history-substring-search-down
 
 for f in ~/.config/zsh_config/*; do source $f; done
 
-export NPM_TOKEN="glpat-GEsgZjcpUvANB1UJwzhc"
-
 # PATH
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/Applications/IntelliJ IDEA.app/Contents/MacOS:$PATH"
