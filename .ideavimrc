@@ -16,7 +16,7 @@ vmap K :m '<-2<CR>gv=gv
 nmap <leader>cf <action>(ReformatCode)
 nmap <leader>ca <action>(ShowIntentionActions)
 nmap <leader>ci <action>(OptimizeImports)
-nmap <leader>cu <action>(FindUsages)
+nmap <leader>fu <action>(FindUsages)
 nmap gd <action>(GotoDeclaration)
 nmap gD <action>(GotoTypeDeclaration)
 nmap gi <action>(GotoImplementation)
