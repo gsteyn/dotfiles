@@ -1,8 +1,10 @@
+asdf
 bat
-coreutils
 curl
+felixkratz/formulae/borders
 fzf
 git
+gopls
 jesseduffield/lazygit/lazygit
 jq
 koekeishiya/formulae/skhd
@@ -19,6 +21,7 @@ ripgrep
 sheldon
 starship
 stow
+watchman
 wget
 zellij
 zoxide
