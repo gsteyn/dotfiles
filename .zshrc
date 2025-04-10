@@ -53,9 +53,6 @@ alias gcplogin="gcloud auth application-default login"
 alias workspace="cd ~/workspace"
 
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-#[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
 eval "$(zoxide init zsh)"
 
 # >>> conda initialize >>>
@@ -84,3 +81,7 @@ if [ -f '/Users/gareth/workspace/google-cloud-sdk/path.zsh.inc' ]; then . '/User
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/gareth/workspace/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/gareth/workspace/google-cloud-sdk/completion.zsh.inc'; fi
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
