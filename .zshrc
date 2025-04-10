@@ -77,10 +77,10 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/gareth/workspace/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/gareth/workspace/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f "$HOME/workspace/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/workspace/google-cloud-sdk/path.zsh.inc"; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/gareth/workspace/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/gareth/workspace/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/Users/gareth/workspace/google-cloud-sdk/completion.zsh.inc' ]; then . "$HOME/workspace/google-cloud-sdk/completion.zsh.inc"; fi
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
