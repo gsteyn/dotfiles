@@ -1,5 +1,10 @@
 setopt auto_cd
 
+# This is needed due to an error that occurs when going back-and-forth between INSERT and VISUAL mode 
+if [[ "${widgets[zle-keymap-select]#user:}" == "starship_zle-keymap-select" || \
+      "${widgets[zle-keymap-select]#user:}" == "starship_zle-keymap-select-wrapped" ]]; then
+    zle -N zle-keymap-select "";
+fi
 eval "$(starship init zsh)"
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
