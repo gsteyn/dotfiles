@@ -8,7 +8,7 @@ dynamic_padding = true
 decorations = "Buttonless"
 
 [font]
-normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+normal = { family = "BlexMono Nerd Font", style = "Regular" }
 size = 13
 
 [general]
