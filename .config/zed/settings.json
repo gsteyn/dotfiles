@@ -7,61 +7,75 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry"
+    }
+  },
+  "context_servers": {
+    "postgres-context-server": {
+      "enabled": false,
+      "settings": {}
+    }
+  },
   "agent": {
+    "always_allow_tool_actions": true,
     "default_model": {
       "provider": "openai",
-      "model": "gpt-4.1-mini"
-    },
-    "version": "2"
+      "model": "gpt-4.1"
+    }
   },
   "vim_mode": true,
-  "relative_line_numbers": true,
+  "relative_line_numbers": "enabled",
   "icon_theme": "Catppuccin Latte",
   "ui_font_size": 16,
   "buffer_font_size": 14,
+  "terminal": {
+    "font_family": "BlexMono Nerd Font Mono"
+  },
   "theme": {
     "mode": "system",
     "light": "Catppuccin Latte - No Italics",
     "dark": "One Dark"
-  },
-  "languages": {
-    "Python": {
-      "language_servers": ["ruff", "pyrefly", "!pyright", "!pylsp"],
-      "format_on_save": "on",
-      "formatter": [
-        {
-          "code_actions": {
-            // Fix all auto-fixable lint violations
-            "source.fixAll.ruff": true,
-            // Organize imports
-            "source.organizeImports.ruff": true
-          }
-        },
-        {
-          "language_server": {
-            "name": "ruff"
-          }
-        }
-      ]
-    }
-  },
-  "lsp": {
-    "pyrefly": {
-      "binary": {
-        "path": ".venv/bin/pyrefly",
-        "arguments": ["lsp"]
-      },
-      "settings": {
-        "python": {
-          "pythonPath": ".venv/bin/python"
-        },
-        "pyrefly": {
-          "project_includes": ["apps/**/*.py", "src/**/*.py", "tests/**/*.py"],
-          "project_excludes": ["**/.[!/.]*", "**/*venv/**"],
-          "search_path": ["src"],
-          "ignore_errors_in_generated_code": true
-        }
-      }
-    }
   }
+  // "languages": {
+  //   "Python": {
+  //     "language_servers": ["ruff", "pyrefly", "!pyright", "!pylsp"],
+  //     "format_on_save": "on",
+  //     "formatter": [
+  //       {
+  //         "code_actions": {
+  //           // Fix all auto-fixable lint violations
+  //           "source.fixAll.ruff": true,
+  //           // Organize imports
+  //           "source.organizeImports.ruff": true
+  //         }
+  //       },
+  //       {
+  //         "language_server": {
+  //           "name": "ruff"
+  //         }
+  //       }
+  //     ]
+  //   }
+  // },
+  // "lsp": {
+  //   "pyrefly": {
+  //     "binary": {
+  //       "path": ".venv/bin/pyrefly",
+  //       "arguments": ["lsp"]
+  //     },
+  //     "settings": {
+  //       "python": {
+  //         "pythonPath": ".venv/bin/python"
+  //       },
+  //       "pyrefly": {
+  //         "project_includes": ["apps/**/*.py", "src/**/*.py", "tests/**/*.py"],
+  //         "project_excludes": ["**/.[!/.]*", "**/*venv/**"],
+  //         "search_path": ["src"],
+  //         "ignore_errors_in_generated_code": true
+  //       }
+  //     }
+  //   }
+  // }
 }
