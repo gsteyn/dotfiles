@@ -77,7 +77,7 @@ ignore_base = false
 
 [gcloud]
 style = "fg:flamingo"
-format = "[$symbol$account(@$domain)($region) ]($style)"
+format = "[$symbol$account(@$domain)($region)(:$project) ]($style)"
 
 [fill]
 symbol = " "
