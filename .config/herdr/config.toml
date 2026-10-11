@@ -1,0 +1,15 @@
+onboarding = false
+[theme]
+name = "catppuccin-latte"
+
+[session]
+resume_agents_on_restore = true
+
+[experimental]
+switch_ascii_input_source_in_prefix = false
+
+# Evenly distribute pane sizes in the current tab (herdr halves on each split)
+[[keys.command]]
+key = "prefix+="
+type = "shell"
+command = "~/.config/herdr/equalize-panes.py"
