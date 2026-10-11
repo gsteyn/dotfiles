@@ -28,16 +28,12 @@ eval "$(sheldon source)"
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
 
-# google cloud platform
-# source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
-# source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
-# export USE_GKE_GCLOUD_AUTH_PLUGIN=True
-
+# source zsh_config files
+# in ./.config/zvh_config live files which contain aliases, project specfic functions/aliases, etc.
 for f in ~/.config/zsh_config/*; do source $f; done
 
 # PATH
 export PATH="/opt/homebrew/bin:$PATH"
-export PATH="/Applications/IntelliJ IDEA.app/Contents/MacOS:$PATH"
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
 # asdf
@@ -45,9 +41,6 @@ export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
 # go 
 export PATH="/usr/local/go/bin:$PATH"
-
-# google cloud
-alias gcplogin="gcloud auth application-default login"
 
 # etc
 alias workspace="cd ~/workspace"
@@ -59,12 +52,6 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f "$HOME/workspace/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/workspace/google-cloud-sdk/path.zsh.inc"; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/gareth/workspace/google-cloud-sdk/completion.zsh.inc' ]; then . "$HOME/workspace/google-cloud-sdk/completion.zsh.inc"; fi
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
@@ -90,3 +77,9 @@ unset __conda_setup
 # Created by `pipx` on 2025-04-11 08:56:07
 export PATH="$PATH:$HOME/.local/bin"
 
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/gareth/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/gareth/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/gareth/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/gareth/google-cloud-sdk/completion.zsh.inc'; fi
